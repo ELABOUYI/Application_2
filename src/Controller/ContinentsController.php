@@ -21,9 +21,9 @@ class ContinentsController extends AbstractController
         ]);
     }
     /**
-     * @Route("/continents/{id}", name="afficher_continents")
+     * @Route("/continent/{id}", name="afficher_continent")
      */
-    public function AfficherContinents(Continent $continent, $id ): Response
+    public function AfficherContinent(Continent $continent, $id ): Response
     {
         return $this->render('continents/continent.html.twig', [
             'continent' => $continent

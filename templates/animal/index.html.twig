@@ -20,7 +20,7 @@
              
                 {% for continent in animal.continents %}
                 
-                    <a href="" class="btn btn-info">{{ continent.libelle}}</a> 
+                    <a href="{{ path('afficher_continent', {'id':continent.id}) }}" class="btn btn-info">{{continent.libelle}}</a> 
                 
                 {% endfor %}
         </div>
