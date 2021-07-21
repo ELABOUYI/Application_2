@@ -15,7 +15,13 @@
                 <h2> <a href="{{ path('afficher_animal', {'id' : animal.id }) }}"> {{ animal.nom }} </a> </h2>
                 <div>{{ animal.description }}</div>
                 <div>
-                    <a href="" class="btn btn-primary">{{animal.famille.libelle}}</a> 
+                    
+                        {% for continent in animal.continents %}
+                        
+                            <a href="{{ path('afficher_continent', {'id':continent.id}) }}" class="btn btn-info">{{continent.libelle}}</a> 
+                        
+                        {% endfor %}
+                    
                 </div>
             </div>
             
